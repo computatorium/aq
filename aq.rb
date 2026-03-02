@@ -8,7 +8,7 @@ STDIN.reopen("/dev/tty", "r")
 
 last = ""
 list.each do |item|
-    if last == ""
+    if last.empty?
         line = Reline.readline("What comes first? ", true)
     else
         line = Reline.readline("What comes after #{last}? ", true)
